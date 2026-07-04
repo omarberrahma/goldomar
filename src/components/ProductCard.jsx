@@ -16,9 +16,9 @@ const ProductCard = ({ product }) => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
                     <button
                         onClick={() => openProductModal(product)}
-                        className="px-5 py-2.5 bg-white/15 hover:bg-gold-500/80 hover:text-black text-white text-xs font-bold uppercase tracking-wider rounded-full backdrop-blur-md transition-all duration-300 w-full cursor-pointer"
+                        className="px-5 py-2.5 bg-white/15 hover:bg-gold-500/80 hover:text-black text-white text-xs font-bold uppercase tracking-[0.2em] rounded-full backdrop-blur-md transition-all duration-500 w-full cursor-pointer"
                     >
-                        عرض التفاصيل الفنية
+                        اكتشف التفاصيل الملكية
                     </button>
                 </div>
             </div>

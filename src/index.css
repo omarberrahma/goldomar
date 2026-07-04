@@ -18,8 +18,10 @@
   --color-onyx-light: #141416;
   --color-onyx-border: #1f1f23;
 
-  --font-sans: "Plus Jakarta Sans", sans-serif;
-  --font-serif: "Playfair Display", "Amiri", serif;
+  --font-sans: "Alexandria", "Tajawal", sans-serif;
+  --font-serif: "Playfair Display", "Amiri", "Reem Kufi", serif;
+  --font-arabic-heading: "Reem Kufi", "Amiri", serif;
+  --font-body: "Tajawal", "Alexandria", sans-serif;
 
   --animate-shimmer: shimmer 2.5s infinite linear;
   --animate-float: float 6s ease-in-out infinite;
@@ -57,10 +59,15 @@
 }
 
 body {
-  font-family: var(--font-sans);
+  font-family: var(--font-body);
   background-color: #050505;
+  color: #fff;
   overflow-x: hidden;
   margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-arabic-heading);
 }
 
 /* Gold metallic background text gradient */

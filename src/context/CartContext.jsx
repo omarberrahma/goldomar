@@ -30,7 +30,7 @@ export const CartProvider = ({ children }) => {
             }
             return [...prev, { ...product, qty: 1 }];
         });
-        addToast("تمت الإضافة للمقتنيات", `${product.name} أصبح الآن بالسلة.`);
+        addToast("إضافة لملفك الشخصي", `${product.name} ضمن مقتنياتك الآن.`);
     };
 
     const removeFromCart = (id) => {
@@ -57,6 +57,31 @@ export const CartProvider = ({ children }) => {
     const totalQty = cart.reduce((acc, item) => acc + item.qty, 0);
     const totalPrice = cart.reduce((acc, item) => acc + (item.price * item.qty), 0);
 
+    const checkoutViaWhatsApp = () => {
+        const WHATSAPP_PHONE_NUMBER = "213555555555";
+        if (cart.length === 0) return;
+
+        let textPayload = `*طلب اقتناء مجوهرات فاخرة - دار النخبة إيليت عمر*\n`;
+        textPayload += `--------------------------------------------------\n`;
+
+        cart.forEach((item, index) => {
+            const sanitizedName = item.name.replace(/[^\w\s\u0600-\u06FF]/g, '');
+            textPayload += `${index + 1}. *${sanitizedName}*\n`;
+            textPayload += `   الكمية: ${parseInt(item.qty)}\n`;
+            textPayload += `   القيمة التقديرية: ${(item.price * item.qty).toLocaleString()} د.ج\n`;
+        });
+
+        textPayload += `--------------------------------------------------\n`;
+        textPayload += `*إجمالي قيمة المقتنيات:* ${totalPrice.toLocaleString()} د.ج\n\n`;
+        textPayload += `يرجى تأكيد توفر هذه القطع الفنية لترتيب عملية التسليم الملكي.`;
+
+        const encodedText = encodeURIComponent(textPayload);
+        const targetUrl = `https://api.whatsapp.com/send?phone=${WHATSAPP_PHONE_NUMBER}&text=${encodedText}`;
+
+        const isolatedWindow = window.open(targetUrl, '_blank', 'noopener,noreferrer');
+        if (isolatedWindow) isolatedWindow.opener = null;
+    };
+
     return (
         <CartContext.Provider value={{
             cart,
@@ -71,7 +96,8 @@ export const CartProvider = ({ children }) => {
             openProductModal,
             closeProductModal,
             toasts,
-            addToast
+            addToast,
+            checkoutViaWhatsApp
         }}>
             {children}
         </CartContext.Provider>

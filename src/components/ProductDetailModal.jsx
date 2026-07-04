@@ -36,17 +36,17 @@ const ProductDetailModal = () => {
 
                             <div className="bg-onyx-solid/60 p-4 rounded-xl border border-onyx-border space-y-2 mb-6">
                                 <div className="flex justify-between text-xs">
-                                    <span className="text-zinc-500">العيار الفعلي للذهب</span>
-                                    <span className="text-zinc-300 font-medium">18 قيراط (مكفول)</span>
+                                    <span className="text-zinc-500 uppercase tracking-widest text-[9px]">العيار الملكي</span>
+                                    <span className="text-zinc-300 font-medium">18 قيراط (خالص)</span>
                                 </div>
                                 <div className="flex justify-between text-xs">
-                                    <span className="text-zinc-500">حالة التوثيق</span>
+                                    <span className="text-zinc-500 uppercase tracking-widest text-[9px]">حالة التوثيق</span>
                                     <span className="text-emerald-400 font-semibold flex items-center gap-1">
-                                        <i className="fa-solid fa-circle-check text-[10px]"></i> موثقة بختم الجودة
+                                        <i className="fa-solid fa-circle-check text-[10px]"></i> بختم الجودة المعتمد
                                     </span>
                                 </div>
                                 <div className="flex justify-between text-xs">
-                                    <span className="text-zinc-500">الوزن المقدر</span>
+                                    <span className="text-zinc-500 uppercase tracking-widest text-[9px]">الوزن التقديري</span>
                                     <span className="text-zinc-300 font-mono">~ 4.5 غرام</span>
                                 </div>
                             </div>
@@ -57,9 +57,9 @@ const ProductDetailModal = () => {
                                 addToCart(selectedProduct.id);
                                 closeProductModal();
                             }}
-                            className="w-full py-4 bg-gradient-to-r from-gold-600 to-gold-400 hover:from-gold-500 hover:to-gold-300 text-black text-xs font-bold uppercase tracking-widest transition-colors cursor-pointer"
+                            className="w-full py-4 bg-gradient-to-r from-gold-600 to-gold-400 hover:from-gold-500 hover:to-gold-300 text-black text-xs font-bold uppercase tracking-[0.2em] transition-all duration-500 cursor-pointer"
                         >
-                            أضف إلى حقيبة التسوق الخاصة بي
+                            اقتناء هذه القطعة
                         </button>
                     </div>
                 </div>

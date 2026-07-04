@@ -25,10 +25,10 @@ const RingFinder = () => {
             <div className="max-w-4xl mx-auto glass-panel p-8 md:p-12 rounded-3xl">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                     <div>
-                        <span className="text-xs uppercase tracking-widest text-gold-400 font-semibold">مساعد القياس الرقمي</span>
-                        <h3 className="text-3xl font-serif font-bold text-white mt-2 mb-4">اعثري على مقاس الخاتم المثالي</h3>
-                        <p className="text-zinc-400 text-sm leading-relaxed mb-6">
-                            ضعي خاتمك الحالي على الدائرة المعروضة على الشاشة، وقومي بضبط شريط التمرير أدناه حتى يتطابق القطر الداخلي للخاتم بالكامل مع الدائرة المضيئة لمعرفة مقاسك بدقة.
+                        <span className="text-xs uppercase tracking-[0.3em] text-gold-400 font-semibold">خدمة القياس الافتراضية</span>
+                        <h3 className="text-3xl font-serif font-bold text-white mt-2 mb-4">تحديد المقاس بدقة متناهية</h3>
+                        <p className="text-zinc-400 text-sm leading-relaxed mb-6 font-light">
+                            لضمان انسيابية الخاتم حول معصمك، ضعي خاتمك المفضل على الدائرة التفاعلية، وقومي بضبط المؤشر حتى يتطابق الإطار الذهبي مع القطر الداخلي لخاتمك.
                         </p>
 
                         <div className="mt-8">
